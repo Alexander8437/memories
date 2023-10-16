@@ -20,6 +20,9 @@ app.use(cors(
 
 app.use(express.json())
 
+app.use("/", (req, res) =>
+    res.send("hello"))
+
 app.use('/posts', router)
 
 const PORT = process.env.PORT || 5000
